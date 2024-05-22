@@ -59,9 +59,9 @@ namespace more_concepts
         auto operator+(difference_type) const -> mock_iterator
         requires std::derived_from<IteratorCategory, std::random_access_iterator_tag>;
 
-        template <std::convertible_to<difference_type> D>
-        friend auto operator+(D const&, mock_iterator const&) -> mock_iterator
-        requires std::derived_from<IteratorCategory, std::random_access_iterator_tag>;
+        // template <std::convertible_to<difference_type> D>
+        // friend auto operator+(D const&, mock_iterator const&) -> mock_iterator
+        // requires std::derived_from<IteratorCategory, std::random_access_iterator_tag>;
 
         auto operator-(difference_type const&) const -> mock_iterator
         requires std::derived_from<IteratorCategory, std::random_access_iterator_tag>;
